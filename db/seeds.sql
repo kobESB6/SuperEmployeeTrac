@@ -17,7 +17,7 @@ VALUES (1, 50000, 'Sales Rep'),
        (4, 120000, 'Finance Manager'),
        (5, 95000, 'Paralegal'),
        (5, 125000, 'Legal Counsel');
- INSERT INTO employee (role_id, first_name, last_name, manager_id)
+INSERT INTO employee (role_id, first_name, last_name, manager_id)
 VALUES (2, 'John', 'Doe', NULL),
        (4, 'Jane', 'Smith', 1),
        (6, 'Alice', 'Johnson', 2),
