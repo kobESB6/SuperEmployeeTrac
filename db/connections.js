@@ -4,14 +4,14 @@ const { Pool } = require('pg');
 // Connect to database
 const pool = new Pool(
   {
-    // TODO: Enter PostgreSQL username
-    user: '',
-    // TODO: Enter PostgreSQL password
-    password: '',
+   
+    user: 'postgres',
+    password: 'knowyourroot',
     host: 'localhost',
-    database: 'employeeTrac_db;'
+    database: 'employeeTrac_db',
+    port: 5432 //
   },
   console.log(`Connected to the employeeTrac_db database.`)
 )
 
-pool.connect();
+module.exports = pool();

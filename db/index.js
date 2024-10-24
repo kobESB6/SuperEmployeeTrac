@@ -1,6 +1,6 @@
 const pool = require('./connections');
 
-class DB {
+class DatabaseHandler {
   constructor() {}
 
   async query(sql, args = []) {
@@ -120,4 +120,4 @@ class DB {
   }
 }
 
-module.exports = new DB();
+module.exports = new DatabaseHandler();

@@ -1,4 +1,4 @@
-const { prompt, default: inquirer } = require('inquirer');
+const { prompt } = require('inquirer');
 const logo = require('asciiart-logo');
 const db = require('./db');
 
@@ -84,7 +84,6 @@ function loadMainPrompts() {
     },
   ]).then((res) => {
     let choice = res.choice;
-    // Call the appropriate function depending on what the user chose
     switch (choice) {
       case 'VIEW_EMPLOYEES':
         viewEmployees();
@@ -128,8 +127,7 @@ function loadMainPrompts() {
       case 'REMOVE_ROLE':
         removeRole();
         break;
-      default:
-        quit();
+      default: quit();
     }
   });
 }
@@ -330,7 +328,7 @@ function addRole() {
       name: name,
       value: id,
     }));
-
+// when adding an employee role these questions will guide through the process
     prompt([
       {
         name: 'title',
